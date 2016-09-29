@@ -1,0 +1,586 @@
+@import 'core/core';
+
+
+
+.clearfix:after {
+  content: ' ';
+  display: block;
+  clear: both;
+}
+
+.wrapper {
+  width: 1160px;
+  margin: 0 auto;
+}
+
+
+
+
+
+
+header {
+  padding: 35px 0;
+
+
+
+  .header__logo {
+    text-decoration: none;
+    width: 205px;
+  }
+
+
+
+  .ruler {
+    position: relative;
+    float: right;
+    vertical-align: top;
+  }
+
+  .ruler__item {
+    display: inline-block;
+    list-style-type: none;
+    margin-left: 10px;
+    width: 17px;
+    height: 16px;
+  
+    a {
+      display: block;
+      height: 16px;
+      width:  17px;
+      position: absolute;
+      top: 0;
+      padding: 0;
+    }
+  }
+
+  .ruler__link1 {
+    background: url("../img/ruler-snetworks.png") 0 -17px no-repeat;  
+  }
+
+  .ruler__link1:hover {
+    background-position: 0 0;  
+  }
+
+  .ruler__link2 {
+    background: url("../img/ruler-snetworks.png") -17px -17px no-repeat;  
+  }
+
+  .ruler__link2:hover {
+    background-position: -17px 0;  
+  }
+
+  .ruler__link3 {
+    background: url("../img/ruler-snetworks.png") -34px -17px no-repeat;  
+  }
+
+  .ruler__link3:hover {
+    background-position: -34px 0;  
+  }
+
+  .ruler__link4 {
+    background: url("../img/ruler-snetworks.png") -51px -17px no-repeat;  
+  }
+
+  .ruler__link4:hover {
+    background-position: -51px 0;  
+  }
+
+  .ruler__link5 {
+    background: url("../img/ruler-snetworks.png") -69px -17px no-repeat;  
+  }
+
+  .ruler__link5:hover {
+    background-position: -69px 0;  
+  }
+}
+
+
+
+
+
+
+
+nav {
+  background-color: $color_dark;
+
+
+  .menu {
+    width: auto;
+    display: inline-block;
+  }
+
+  .menu__item {
+    display: inline-block;
+    list-style-type: none;
+    border-right: 1px solid $color_border;
+    box-sizing: border-box;
+    border-collapse: collapse;
+  }
+
+  .menu__item:first-child {
+    background-color: $color_blue;
+    border: none;
+  }
+
+  .menu__link {
+    display: block;
+    text-decoration: none;  
+    padding: 23px 35px;
+    @include fontstyle($font_stack, '14px', $color_white)
+  }
+
+  .menu__link:hover {
+    color: $color_yellow;
+  }
+
+  .search {
+    float: right;
+    border: 1px solid $color_border; 
+    height: 38px; 
+    width: 240px;
+    box-sizing: border-box;
+    margin-right: 8px;
+    margin-top: 10px;
+    position: relative;
+  }
+
+  .search__input {
+    border: none; 
+    outline: none; 
+    -webkit-appearance: none; 
+    height: 35px;
+    padding: 5px 10px;
+    width: 238px;
+    background-color: #35383c;
+    @include fontstyle($font_fam, 12px, #535659);
+  }
+
+  .search__submit {
+    position: absolute;
+    background: url("../img/search-icon.png") 0 0 no-repeat; 
+    border: none;
+    cursor: pointer;
+    top: 11px;
+    right: 5px;
+    width: 20px;
+  }
+}
+
+
+
+
+
+
+
+.slider.wrapper {
+  margin: 40px auto 70px;
+}
+
+
+
+
+
+
+
+
+article {
+
+  .article__col {
+    float: left;
+    width: 240px;
+    padding-right: 15px;
+  }
+
+  .article__number {
+    float: left;
+    margin-right: 25px;
+    @include fontstyle($font_stack, 90px, #e9e9ea);
+  }
+
+  .article__icon {
+    background: url(../img/aside-icons.png) no-repeat 0 0;
+    display: block;
+    height: 33px;
+    width: 34px;
+    margin-left: 8px;
+    margin-top: 5px;
+  }
+
+  .icon2 {
+    background: url(../img/aside-icons.png) no-repeat -33px 0;
+  }
+
+  .icon3 {
+    background: url(../img/aside-icons.png) no-repeat -68px 0;
+  }
+
+  .article__head {
+    @include fontstyle($font_stack, 20px, #2a2b2e);
+  }
+
+  .article__txt {
+    @include fontstyle($font_fam, 13px, $color_txt);
+    margin: 20px auto; 
+  }
+
+  .article__link {
+    display: block;
+    margin-right: 6px;
+    margin-top: 22px;
+    margin-bottom: 28px;
+    text-decoration: none;
+    @include fontstyle($font_stack, 13px, #2a2b2a);
+  }
+
+  .article__link span {
+    color: $color_blue;
+  }
+
+  .article__link:hover {
+    color: $color_blue;
+  }
+
+  .article__link:hover span {
+    color: #2a2b2a;
+  }
+
+}
+
+
+
+
+
+
+main {
+  background-color: $color_dark;
+  margin-top: 85px;
+  padding: 45px 0 65px;
+  @include fontstyle($font_stack, 24px, $color_white); 
+
+
+  .main__col {
+    position: relative;
+    margin: 60px 0 35px 20px;
+  }
+
+  .main__link {
+    display: inline-block;
+    text-decoration: none;
+  }
+
+  .main__colhead {
+    margin-top: 30px;
+    text-align: center;
+    font-size: 16px;
+    color: $color_white;
+  }
+
+  .img-hover {
+    display: none;
+    position: absolute;
+    width: 260px;
+    height: 260px;
+    @include fontstyle($font_fam, 70px, $color_white);
+    background-color: $color_blue;
+    line-height: 260px;
+    vertical-align: middle;
+    text-align: center;
+    opacity: 0.9;
+    top: 0;
+    left: 0;
+    transition-duration: 1s;
+  }
+
+  .main__link:hover figcaption {
+    color: $color_yellow;
+  }
+
+  .main__link:hover .img-hover {
+    display: block;
+  }
+
+}
+
+
+
+
+
+
+aside {
+  background-color: $color_aside;
+  padding: 55px 0 65px;
+
+
+
+  .aside__col {
+    width: 560px;
+    float: left;
+    margin-left: 20px; 
+  }
+
+  .aside__colhead {
+    @include fontstyle($font_stack, 24px, $color_dark);
+  }
+
+  .aside__content {
+    margin-top: 45px;
+    color: $color_txt;
+  }
+
+  .aside__img {
+    float: left;
+    margin-right: 30px;
+    position: relative;
+  }
+
+  .square {
+    width: 37px;
+    height: 37px;
+    line-height: 37px;
+    text-align: center;
+    vertical-align: middle;
+    position: absolute;
+    left: -18px;
+    top: 12px;
+    @include fontstyle($font_stack, 15px, $color_white);
+    background-color: $color_blue;
+  }
+
+  .square.yellow-square {
+    top: 47px;
+    @include fontstyle($font_stack, 15px, '#2a2b2e');
+    background-color: $color_yellow;
+  }
+
+
+  .aside__head {
+    @include fontstyle($font_fam, 13px, $color_txt);
+    margin-bottom: 20px;
+  }
+
+  .aside__head h5 {
+    @include fontstyle($font_stack, 16px, $color_dark);
+  }
+
+  .aside__head a {
+    @include fontstyle($font_stack, 15px, $color_blue);
+    text-decoration: none;
+  }
+
+  .aside__head a h5 {
+    color: #0187f4;
+  }
+
+
+
+
+
+
+  .accordion {
+    min-height: 300px;
+    margin: 45px auto 0;
+    @include fontstyle($font_fam, 15px, $color_txt);
+  }
+
+  .accordion__item {
+    background-color: $color_white;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    height: 40px;
+    line-height: 40px;
+    vertical-align: middle;
+    margin-top: 7px;
+  }
+
+  .accordion__item .type {
+    display: inline-block;
+    width: 35px;
+    margin-right: 8px;
+    text-align: center;
+    border-right: 1px solid #ccc;
+  }
+
+  .accordion__item .type:after {
+    content: '+';
+  }
+
+  .accordion__item.open {
+    background: $color_yellow;
+    border: none;
+    color: $color_white;
+  }
+
+  .accordion__item.open .type:after {
+    content: '-';
+  }
+ 
+  .accordion__data {
+    margin: 30px 0 30px 40px;
+    display: none;
+  }
+
+}
+
+
+
+
+
+
+
+
+.logos {
+
+  .ruler {
+    position: relative;
+    width: 955px;
+    margin: 75px auto; 
+  }
+
+  .ruler__item {
+    display: inline-block;
+    list-style-type: none;
+    width: 155px;
+    height: 65px;
+  }
+
+  .ruler a {
+    display: block;
+    position: absolute;
+    top: 0;
+    padding: 0;
+    width:  155px;
+    height: 65px;
+  }
+
+  .ruler a:hover {
+    opacity: 0.5; 
+  }
+
+  .ruler__link1 {
+    background: url("../img/ruler-logo.png") 0 0 no-repeat;  
+  }
+
+  .ruler__link2 {
+    background: url("../img/ruler-logo.png") -145px 0 no-repeat;  
+  }
+
+  .ruler__link3 {
+    background: url("../img/ruler-logo.png") -300px 0 no-repeat;  
+  }
+
+  .ruler__link4 {
+    background: url("../img/ruler-logo.png") -455px 0 no-repeat;  
+  }
+
+  .ruler__link5 {
+    background: url("../img/ruler-logo.png") -600px 0 no-repeat;  
+  }
+
+  .ruler__link6 {
+    background: url("../img/ruler-logo.png") -750px 0 no-repeat;  
+  }
+
+}
+
+
+
+
+
+
+
+
+
+footer {
+  background-color: $color_dark;
+  color: $color_white;
+  padding-top: 55px;
+
+
+
+  .footer__col {
+    width: 290px;
+    float: left;
+  }
+
+  .footer__colhead {
+    margin: 20px 0;
+    font-size: 16px;
+    font-family: $font_stack;
+  }
+
+  .onfooter {
+    width: auto;
+    display: block;
+    margin-bottom: 50px;
+  
+
+    .menu__item {
+      display: block;
+      border-bottom: 1px solid #393c40;
+      margin-right: 50px;
+    }
+
+    .menu__item:first-child {
+      background-color: $color_dark;
+    }
+
+    .menu__item:last-child {
+      display: block;
+      border-bottom: none;
+    }
+
+    .menu__link {
+      @include fontstyle($font_fam, 13px, #828385);
+      display: block;
+      padding: 15px 0;
+      text-decoration: none;
+    }
+
+    .menu__link:hover {
+      color: $color_blue;
+    }
+  }
+  
+
+
+  .contacts {
+    padding: 25px 0;
+    background-color: #35383c;
+    @include fontstyle($font_fam, 12px, #828385);
+  }
+
+  .footer__icon-location {
+    margin: 0;
+    display: inline-block;
+    width: 12px;
+    height: 18px;
+    background: url("../img/footer-icons.png") 0 0 no-repeat;  
+  }
+
+  .footer__icon-phone {
+    margin: 0;
+    display: inline-block;
+    width: 12px;
+    height: 18px;
+    background: url("../img/footer-icons.png") -12px 0 no-repeat;  
+  }
+
+  .footer__icon-email {
+    margin: 0;
+    display: inline-block;
+    width: 17px;
+    height: 18px;
+    background: url("../img/footer-icons.png") -24px 0 no-repeat;  
+  }
+
+  span {
+    margin-right: 30px;
+    line-height: 18px;
+    vertical-align: top;
+  }
+
+  span:last-child {
+    float: right;
+  }
+
+}
